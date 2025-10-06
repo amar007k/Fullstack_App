@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const EditUser = () => {
+    const API_BASE_URL="fullstackbackend-production-053e.up.railway.app"
     const navigate = useNavigate();
     const{id} = useParams();
     const[user,setUser] = useState({
@@ -23,7 +24,7 @@ const EditUser = () => {
     };
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        await axios.put(`http://localhost:8080/user/${id}`,user)
+        await axios.put(`http://${API_BASE_URL}/user/${id}`,user)
         .then(()=>{
             alert("Form Data has been Successfully Updated!..");
             navigate("/")
@@ -31,7 +32,7 @@ const EditUser = () => {
         .catch((err)=>console.log(err))
     };
     const loadUser = async()=>{
-    const result = await axios.get(`http://localhost:8080/user/${id}`);
+    const result = await axios.get(`http://${API_BASE_URL}/user/${id}`);
     setUser(result.data);
     }
   return (

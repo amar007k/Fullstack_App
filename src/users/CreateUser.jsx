@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const CreateUser = () => {
+    const API_BASE_URL="fullstackbackend-production-053e.up.railway.app"
     const navigate = useNavigate();
     const[user,setUser] = useState({
         name:"",
@@ -19,7 +20,7 @@ const CreateUser = () => {
     };
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        await axios.post(`http://localhost:8080/adduser`,user)
+        await axios.post(`http://${API_BASE_URL}/adduser`,user)
         .then(()=>{
             alert("Form Data has been Successfully Submitted!..");
             navigate("/")
