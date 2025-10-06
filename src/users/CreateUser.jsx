@@ -20,7 +20,7 @@ const CreateUser = () => {
     };
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        await axios.post(`https://fullstackbackend-production-053e.up.railway.app/adduser`,user)
+        await axios.post(`https://fullstackbackend-production-053e.up.railway.app/user`,user)
         .then(()=>{
             alert("Form Data has been Successfully Submitted!..");
             navigate("/")
