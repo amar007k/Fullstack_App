@@ -9,12 +9,12 @@ const Home = () => {
     loadUser();
   }, []);
   const loadUser = async () => {
-    const result = await axios.get(`https://${API_BASE_URL}/users`);
+    const result = await axios.get(`${API_BASE_URL}/users`);
     setUsers(result.data);
   };
 
   const deleteUser = async(id)=>{
-    await axios.delete(`https://${API_BASE_URL}/user/${id}`)
+    await axios.delete(`${API_BASE_URL}/user/${id}`)
     loadUser();
   }
   return (

@@ -24,7 +24,7 @@ const EditUser = () => {
     };
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        await axios.put(`https://${API_BASE_URL}/user/${id}`,user)
+        await axios.put(`${API_BASE_URL}/user/${id}`,user)
         .then(()=>{
             alert("Form Data has been Successfully Updated!..");
             navigate("/")
@@ -32,7 +32,7 @@ const EditUser = () => {
         .catch((err)=>console.log(err))
     };
     const loadUser = async()=>{
-    const result = await axios.get(`https://${API_BASE_URL}/user/${id}`);
+    const result = await axios.get(`${API_BASE_URL}/user/${id}`);
     setUser(result.data);
     }
   return (

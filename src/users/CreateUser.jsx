@@ -20,7 +20,7 @@ const CreateUser = () => {
     };
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        await axios.post(`https://${API_BASE_URL}/adduser`,user)
+        await axios.post(`${API_BASE_URL}/adduser`,user)
         .then(()=>{
             alert("Form Data has been Successfully Submitted!..");
             navigate("/")
