@@ -9,7 +9,7 @@ const Home = () => {
     loadUser();
   }, []);
   const loadUser = async () => {
-    const result = await axios.get(`${API_BASE_URL}/users`);
+    const result = await axios.get(`${API_BASE_URL}/user`);
     setUsers(result.data);
   };
 
