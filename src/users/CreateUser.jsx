@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const CreateUser = () => {
-    const API_BASE_URL="https://fullstackbackend-production-053e.up.railway.app/"
+    const API_BASE_URL="https://fullstackbackend-production-053e.up.railway.app"
     const navigate = useNavigate();
     const[user,setUser] = useState({
         name:"",
