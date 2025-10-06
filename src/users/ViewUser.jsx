@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 
 const ViewUser = () => {
-    const API_BASE_URL="fullstackbackend-production-053e.up.railway.app"
+    const API_BASE_URL="https://fullstackbackend-production-053e.up.railway.app/"
     const{id} = useParams();
     const[user,setUser] = useState({
         name:"",
@@ -17,7 +17,7 @@ const ViewUser = () => {
     },[]);
    
     const loadUser = async()=>{
-    const result = await axios.get(`http://${API_BASE_URL}/user/${id}`);
+    const result = await axios.get(`https://${API_BASE_URL}/user/${id}`);
     setUser(result.data);
     }
   return (
