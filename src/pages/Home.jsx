@@ -2,19 +2,18 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 const Home = () => {
-  const API_BASE_URL="https://fullstackbackend-production-053e.up.railway.app/"
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     loadUser();
   }, []);
   const loadUser = async () => {
-    const result = await axios.get(`${API_BASE_URL}/user`);
+    const result = await axios.get(`https://fullstackbackend-production-053e.up.railway.app/user`);
     setUsers(result.data);
   };
 
   const deleteUser = async(id)=>{
-    await axios.delete(`${API_BASE_URL}/user/${id}`)
+    await axios.delete(`https://fullstackbackend-production-053e.up.railway.app/user/${id}`)
     loadUser();
   }
   return (
