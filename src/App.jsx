@@ -14,7 +14,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/adduser" element={<CreateUser />}></Route>
+          <Route path="/user" element={<CreateUser />}></Route>
           <Route path="/edituser/:id" element={<EditUser />}></Route>
           <Route path="/viewuser/:id" element={<ViewUser />}></Route>
         </Routes>
