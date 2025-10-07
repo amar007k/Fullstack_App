@@ -21,7 +21,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <Link to={"/adduser"} className="btn btn-outline-light" type="submit">
+          <Link to={"/user"} className="btn btn-outline-light" type="submit">
             Add
           </Link>
         </div>
